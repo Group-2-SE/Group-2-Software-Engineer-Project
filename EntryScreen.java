@@ -5,7 +5,7 @@ import javax.swing.*;
 import javax.swing.plaf.DimensionUIResource;
 import javax.swing.plaf.FontUIResource;
 
-public class LoginGUI extends JFrame{
+public class EntryGUI extends JFrame{
     
     //private JFrame frame;
 
@@ -13,17 +13,13 @@ public class LoginGUI extends JFrame{
 
     private JLabel heading;
 
-    private JButton Login;
     private JButton customer;
     private JButton employee;
     
-
     private Insets insets;
     private Dimension size;
 
-    private LoginGUI LoginFrame;
-    private PersonGUI PersonFrame;
-    //private ClientListing ListingFrame; managemnet
+    private EntryGUI LoginFrame;
     private InputHandler userInput;
 
     public EntryGUI(InputHandler userInput){
