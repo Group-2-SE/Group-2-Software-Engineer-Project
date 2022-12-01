@@ -70,10 +70,11 @@ public class CustomerDeleteGUI extends JFrame{
         
         public void actionPerformed(ActionEvent e){
             String cust_id = textField.getText();
-            userInput.deleteCustomerData(cust_id, userInput.getCurrentUser().getUName());
+            String cus_fname = userInput.getCurrentUser().getfname();
+            userInput.deleteCustomerData(userInput.getCurrentUser().getcustomerid());
             userInput.loadCustomerData();
             customerPanel.getModel().setRowCount(0);
-            customerPanel.showTable(userInput.getcustomer());
+            customerPanel.showTable(userInput.getUser(cus_fname));
             customerPanel.updatecustomerList();
             thisFrame.dispose();
             

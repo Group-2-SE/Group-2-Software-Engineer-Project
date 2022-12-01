@@ -8,17 +8,18 @@ public class Customer {
     private int car_id;
     private int trans_id;
     private int phoneNumber;
-    private static int cust_id= 1000;
+    private int cust_id= 1000;
     private static int index= 0;
     private String first_name;
     private String last_name;
     private String address;
     private String email;
     private Date date;
+   
     private ArrayList<ArrayList<String>> customer_info= new ArrayList<ArrayList<String>>();
 
-    public Customer( String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address){
-        cust_id++;
+    public Customer( String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address, int cust_id){
+        this.cust_id = cust_id++;
         this.first_name= first_name;
         this.last_name= last_name;
         this.trans_id= trans_id;
