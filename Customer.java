@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class Customer {
 
-    private int cust_id;
     private int car_id;
     private int trans_id;
     private int phoneNumber;
+    private static int cust_id= 1000;
     private static int index= 0;
     private String first_name;
     private String last_name;
@@ -16,8 +16,8 @@ public class Customer {
     private Date date;
     private ArrayList<ArrayList<String>> customer_info= new ArrayList<ArrayList<String>>();
 
-    public Customer(int cust_id, String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address){
-        this.cust_id= cust_id;
+    public Customer( String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address){
+        cust_id++;
         this.first_name= first_name;
         this.last_name= last_name;
         this.trans_id= trans_id;
@@ -77,6 +77,8 @@ public class Customer {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your first name: ");
         first_name = input.nextLine();
+        System.out.println("Enter your last name ");
+        last_name = input.nextLine();
         System.out.println("Enter your phone number: ");
         phoneNumber = Integer.valueOf(input.nextLine());
         System.out.println("Enter your address: ");
@@ -85,12 +87,5 @@ public class Customer {
         email = input.nextLine();
         System.out.println("Enter your transaction ID: ");
         trans_id = input.nextLine();
-        System.out.println("Enter your last name ");
-        String creditCardExpirationDate = input.nextLine();
-        System.out.println("Enter your credit card security code: ");
-        String creditCardSecurityCode = input.nextLine();
-        System.out.println("Enter your credit card billing zip code: ");
-        String creditCardBillingZipCode = input.nextLine();
-        System.out.println("Enter your credit card name: ");
     } 
 }
