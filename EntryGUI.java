@@ -3,7 +3,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 import javax.swing.plaf.DimensionUIResource;
-import javax.swing.plaf.FontUIResource;
+//import javax.swing.plaf.FontUIResource;
 
 public class EntryGUI extends JFrame{
     
@@ -120,7 +120,7 @@ public class EntryGUI extends JFrame{
         {
             //Place a hold 
             EntryFrame.dispose();
-            CustomerMenuGUI CustomerMenu = new CustomerMenuGUI(userInput);
+            CustomerInterface CustomerFrame = new CustomerInterface(userInput);
         }
     }
 

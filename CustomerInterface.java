@@ -8,9 +8,9 @@ public class CustomerInterface extends JFrame {
     private JTextField txtLastName; //customer last name box
     private JTextField txtTransId; //transaction reference no./id box
     private JTextField txtCarId; //car id box
-    private JTextField txtphoneNo;
-    private JTextField txtEmail;
-    private JTextField txtAddress;
+    //private JTextField txtphoneNo;
+    //private JTextField txtEmail;
+    //private JTextField txtAddress;
     private JTextField txtChassis; //chassis no. box
     private JButton cmdSearch; //Search button
     private JButton cmdPlaceHold; //Place Hold button
@@ -19,9 +19,13 @@ public class CustomerInterface extends JFrame {
     private JFrame inventory; // view inventory frame
     private JPanel pnlCommand; 
     private JPanel pnlDisplay;
+    private static InputHandler userInput;
 
-    public CustomerInterface()
+    public CustomerInterface(InputHandler userInput)
     {
+        form =this;
+        this.userInput =userInput;
+
         setVisible(true);
         pnlCommand = new JPanel();
         pnlDisplay = new JPanel();
@@ -66,8 +70,8 @@ public class CustomerInterface extends JFrame {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Create and set up the content pane.
-        CustomerInterface newContentPane = new CustomerInterface();
-        newContentPane.setOpacity((float) 10);; //content panes must be opaque
+        CustomerInterface newContentPane = new CustomerInterface(userInput);
+        newContentPane.setOpacity(0.85f); //content panes must be opaque
         frame.setContentPane(newContentPane);
 
         //Display the window.
