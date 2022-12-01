@@ -58,5 +58,30 @@ public class CustomerInterface extends JFrame {
 
     }
 
-   
+    private static void createAndShowGUI() {
+        //Create and set up the window.
+        JFrame frame = new JFrame("Menu");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //Create and set up the content pane.
+        CustomerInterface newContentPane = new CustomerInterface();
+        newContentPane.setOpacity(true); //content panes must be opaque
+        frame.setContentPane(newContentPane);
+
+        //Display the window.
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+
+    private class SubmitButtonListener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            //something
+            System.exit(0);
+        }
+
+    }
+
 }
