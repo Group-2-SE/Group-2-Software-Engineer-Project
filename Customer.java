@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 import java.util.Scanner;
+import java.nio.file.*;
 
 public class Customer {
 
@@ -36,6 +37,7 @@ public class Customer {
     
     public void addCustomerInfo(String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address)
     {
+        //Path output = Paths.get("customerFile.txt");
         File customerFile = getFile("customerFile");
         try{
             FileWriter f = new FileWriter(customerFile, true);
@@ -50,6 +52,10 @@ public class Customer {
             }
             catch(IOException ioe){}
         }
+    }
+
+    private File getFile(String string) {
+        return null;
     }
 
     public Customer() {
@@ -103,7 +109,7 @@ public class Customer {
         return id;
     }
 
-    public String
+
     /*public void main(String[] args) 
     {
         Scanner input = new Scanner(System.in);
