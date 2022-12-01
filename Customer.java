@@ -46,12 +46,7 @@ public class Customer {
             f.close();
         }
         catch(IOException ioe){}
-        finally{
-            try{
-                f.close();
-            }
-            catch(IOException ioe){}
-        }
+       
     }
 
     private File getFile(String string) {
@@ -109,7 +104,33 @@ public class Customer {
         return id;
     }
 
+    public int getTransId(){
+        return trans_id;
+    }
 
+    public int getcustomerid(){
+        return cust_id;
+    }
+
+    public int phoneno(){
+        return phoneNumber;
+    }
+
+    public String getemail(){
+        return email;
+    }
+
+    public String getaddress(){
+        return address;
+    }
+
+    public String getfname(){
+        return first_name;
+    }
+
+    public String getlname(){
+        return last_name;
+    }
     /*public void main(String[] args) 
     {
         Scanner input = new Scanner(System.in);
