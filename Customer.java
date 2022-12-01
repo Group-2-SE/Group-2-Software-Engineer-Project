@@ -2,6 +2,8 @@ import java.util.*;
 import java.io.*;
 import java.util.Scanner;
 import java.nio.file.*;
+import java.time.*;
+import java.text.SimpleDateFormat;
 
 public class Customer {
 
@@ -15,7 +17,7 @@ public class Customer {
     private String address;
     private String email;
     private Date date;
-    private ArrayList<ArrayList<String>> customer_info= new ArrayList<ArrayList<String>>();
+    protected ArrayList<ArrayList<String>> customer_info= new ArrayList<ArrayList<String>>();
 
     public Customer( String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address){
         cust_id++;
@@ -33,6 +35,7 @@ public class Customer {
         customer_info.get(index).add(3, last_name);
         customer_info.get(index).add(4, Integer.toString(car_id));
         customer_info.get(index).add(5, Integer.toString(phoneNumber));
+        customer_info.get(index).add(6, getDate());
     }
     
     public void addCustomerInfo(String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address)
@@ -42,7 +45,7 @@ public class Customer {
         try{
             FileWriter f = new FileWriter(customerFile, true);
             f.append(System.getProperty("line.separator"));
-            f.append(first_name+":"+last_name+":"+trans_id+":"+getCustID(first_name)+":"+address+":"+email+":"+phoneNumber);
+            f.append(first_name+":"+last_name+":"+trans_id+":"+getCustID(first_name)+":"+address+":"+email+":"+phoneNumber+);
             f.close();
         }
         catch(IOException ioe){}
@@ -70,9 +73,11 @@ public class Customer {
         return id;
     }
 
-    public Date getDate(){
+    public String getDate(){
         date= new Date();
-        return date;
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+        String formattedDate = sdf.format(date);
+        return formattedDate;
     }
     
     public String getName(int cust_id){
