@@ -7,7 +7,7 @@ import javax.swing.plaf.FontUIResource;
 
 public class LoginGUI extends JFrame{
     
-    private JFrame frame;
+    //private JFrame frame;
 
     private JPanel panel1;
 
@@ -24,7 +24,7 @@ public class LoginGUI extends JFrame{
     private Dimension size;
 
     private LoginGUI LoginFrame;
-    private EntryGUI EntryFrame;
+    //private EntryGUI EntryFrame;
     private InputHandler userInput;
 
     public LoginGUI(InputHandler userInput){
@@ -54,7 +54,7 @@ public class LoginGUI extends JFrame{
         signIn = new JButton("SIGN IN");
         signIn.setPreferredSize(new DimensionUIResource(75, 20));
         signIn.setFont(new FontUIResource(signIn.getText(), Font.BOLD, 10));
-        signIn.addActionListener(new SignInButtonListner());
+        signIn.addActionListener(new LoginButtonListner());
 
         
 
@@ -120,16 +120,16 @@ public class LoginGUI extends JFrame{
             //Getting the String that is in the uname textbox and getting the String of the hidden text in the pwordbox textbox
             
             //String uname = unamebox.getText();
-            //String pword = String.valueOf(pwordbox.getPassword());
-          
+            String pword = String.valueOf(pwordbox.getPassword());
             pwordbox.setText("");
+
             //Checking to see if there was String entered in the unamebox and pwordbox by checking the length of the String
             String pword1 = "SalesRep";
             String pword2 = "Admin";
             String pword3 = "ExecAdmin";
             if ((pword.length() > 0))
             {
-                if (userInput.equals(pword1))
+                if (pword.equals(pword1))
                 {
                     //Disposes the SignInFrame so that the new frame can be displayed on its own
                     LoginFrame.dispose();
