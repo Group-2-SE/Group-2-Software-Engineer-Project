@@ -24,7 +24,6 @@ public class Customer {
         this.car_id= car_id;
         this.phoneNumber= phoneNumber;
         this.address= address;
-        date= new Date();
 
         customer_info.add(new ArrayList<String>());
         customer_info.get(index).add(0, Integer.toString(cust_id));
@@ -35,6 +34,26 @@ public class Customer {
         customer_info.get(index).add(5, Integer.toString(phoneNumber));
     }
     
+    public void addCustomerInfo(String first_name, String last_name, int trans_id, int car_id, int phoneNumber, String address)
+    {
+        File customerFile = getFile("customerFile");
+        try{
+            FileWriter f = new FileWriter(customerFile, true);
+            f.append(System.getProperty("line.separator"));
+            f.append(first_name+":"+last_name+":"+trans_id+":"+getCustID(first_name)+":"+address+":"+email+":"+phoneNumber);
+            f.close();
+        }
+        catch(IOException ioe){}
+        finally{
+            try{
+                f.close();
+            }
+            catch(IOException ioe){}
+        }
+    }
+
+    public Customer() {
+    }
 
     public String getCarID(String first_name){
         String id= "";
@@ -50,10 +69,8 @@ public class Customer {
         return id;
     }
 
-    public Customer() {
-    }
-
     public Date getDate(){
+        date= new Date();
         return date;
     }
     
@@ -72,7 +89,22 @@ public class Customer {
         return Name;
     }
 
-    public void main(String[] args) 
+    public String getCustID(String first_name){
+        String id= "";
+        for(int counter = 0; counter< customer_info.size(); counter++){
+            if ((customer_info.get(counter).get(2) == first_name)){
+                id= customer_info.get(counter).get(0);
+                break;
+            }
+        }
+        if(id!= " "){
+            System.out.println("Not Found");
+        }
+        return id;
+    }
+
+    public String
+    /*public void main(String[] args) 
     {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter your first name: ");
@@ -87,5 +119,5 @@ public class Customer {
         email = input.nextLine();
         System.out.println("Enter your transaction ID: ");
         trans_id = input.nextLine();
-    } 
+    } */
 }
