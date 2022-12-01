@@ -78,10 +78,21 @@ public class CustomerInterface extends JFrame {
     {
         public void actionPerformed(ActionEvent e)
         {
-            //something
-            System.exit(0);
+            //take the chassis no. and uses it to search in inventory
+            String chassis = txtChassis.getText();
         }
 
+    }
+
+    private class PlaceHoldListener implements ActionListener
+    {
+        public void actionPerformed(ActionEvent e)
+        {
+            int cust_id =  Integer.valueOf(txtCustId.getText());
+            int car_id = Integer.valueOf(txtCarId.getText());
+            int trans_id = Integer.valueOf(txtTransId.getText());
+            new Placing_A_Hold(cust_id, trans_id, car_id);
+        }
     }
 
 }
