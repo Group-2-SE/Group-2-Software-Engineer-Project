@@ -55,6 +55,8 @@ public class CustomerInterface extends JFrame {
         pnlDisplay.add(form);
 
         pnlCommand.add(pnlDisplay);
+        cmdSearch.addActionListener(new SubmitButtonListener());
+        cmdPlaceHold.addActionListener(new PlaceHoldListener());
 
     }
 
@@ -65,7 +67,7 @@ public class CustomerInterface extends JFrame {
 
         //Create and set up the content pane.
         CustomerInterface newContentPane = new CustomerInterface();
-        newContentPane.setOpacity(true); //content panes must be opaque
+        newContentPane.setOpacity((float) 10);; //content panes must be opaque
         frame.setContentPane(newContentPane);
 
         //Display the window.
@@ -93,6 +95,14 @@ public class CustomerInterface extends JFrame {
             int trans_id = Integer.valueOf(txtTransId.getText());
             new Placing_A_Hold(cust_id, trans_id, car_id);
         }
+    }
+
+    public static void main(String[] args){
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
     }
 
 }
