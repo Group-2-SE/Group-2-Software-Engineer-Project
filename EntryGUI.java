@@ -41,11 +41,11 @@ public class EntryGUI extends JFrame{
         //Adding action listners to each button to give it functionality
         customer = new JButton("CUSTOMER");
         customer.setPreferredSize(new DimensionUIResource(250, 50));
-        customer.setBounds(5 + insets.left, 45 + insets.top,size.width, size.height);
+        //customer.setBounds(5 + insets.left, 45 + insets.top,size.width, size.height);
 
         employee = new JButton("EMPLOYEE");
         employee.setPreferredSize(new DimensionUIResource(75, 20));
-        employee.setBounds(5 + insets.left, 80 + insets.top,size.width, size.height);
+        //employee.setBounds(5 + insets.left, 80 + insets.top,size.width, size.height);
 
         customer.addActionListener(new customerButtonListner());
         employee.addActionListener(new employeeButtonListner());

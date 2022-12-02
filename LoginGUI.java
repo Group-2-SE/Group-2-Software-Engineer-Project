@@ -47,7 +47,7 @@ public class LoginGUI extends JFrame{
         pwordlabel.setPreferredSize(new DimensionUIResource(65, 12));
 
         pwordbox = new JPasswordField("");
-        pwordbox.setBackground(Color.white);
+        pwordbox.setBackground(Color.GRAY);
         pwordbox.setPreferredSize(new DimensionUIResource(130, 15));
 
         //Adding action listners to each button to give it functionality
@@ -61,7 +61,7 @@ public class LoginGUI extends JFrame{
         //Adding the differents panels, buttons and fields into the frame
         panel1 = new JPanel();
 
-        panel1.setBackground(Color.gray);
+        panel1.setBackground(Color.white);
         panel1.setBorder(BorderFactory.createTitledBorder("Sign In"));
         panel1.setPreferredSize(new DimensionUIResource(325, 150));
         
@@ -80,9 +80,9 @@ public class LoginGUI extends JFrame{
 
         //Positioning the "Password:" label snd text box
         size = pwordlabel.getPreferredSize();
-        pwordlabel.setBounds(5 + insets.left, 65 + insets.top,size.width, size.height);
+        pwordlabel.setBounds(5 + insets.center, 65 + insets.top,size.width, size.height);
         size = pwordbox.getPreferredSize();
-        pwordbox.setBounds(5 + insets.left, 80 + insets.top,size.width, size.height);
+        pwordbox.setBounds(5 + insets.center, 80 + insets.top,size.width, size.height);
 
       //Positioning the sign in button
         size = signIn.getPreferredSize();
@@ -92,6 +92,7 @@ public class LoginGUI extends JFrame{
         panel1.add(heading);
         panel1.add(pwordlabel);
         panel1.add(pwordbox);
+        panel1.add(signIn);
 
         setTitle("Auto Channel Limited Employee Sign In");
         getContentPane().setBackground(Color.gray);
@@ -122,7 +123,7 @@ public class LoginGUI extends JFrame{
             //Checking to see if there was String entered in the unamebox and pwordbox by checking the length of the String
             String pword1 = "SalesRep";
             String pword2 = "Admin";
-            String pword3 = "ExecAdmin";
+            String pword3 = "Manage";
             if ((pword.length() > 0))
             {
                 if (pword.equals(pword1))
