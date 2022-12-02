@@ -11,7 +11,7 @@ public class EntryGUI extends JFrame{
 
     //private JPanel panel1;
 
-    //private JLabel heading;
+    private JLabel heading;
 
     private JButton customer;
     private JButton employee;
@@ -34,15 +34,18 @@ public class EntryGUI extends JFrame{
         //heading = new JLabel("Welcome to Auto Channel Limited, Are you a ...?");//enter the password for managers or sales
         //heading.setFont(new FontUIResource(heading.getText(), Font.BOLD, 12));
 
-        setTitle("Welcome to Auto Channel Limited, Are you a ...?");//enter the password for managers or sales
+        heading = new JLabel("Welcome to Auto Channel Limited, Are you a ...?");//enter the password for managers or sales
         setLayout(new GridLayout(2,1,100,10));
         setBackground(Color.GRAY);
 
         //Adding action listners to each button to give it functionality
         customer = new JButton("CUSTOMER");
         customer.setPreferredSize(new DimensionUIResource(250, 50));
+        customer.setBounds(5 + insets.left, 45 + insets.top,size.width, size.height);
+
         employee = new JButton("EMPLOYEE");
         employee.setPreferredSize(new DimensionUIResource(75, 20));
+        employee.setBounds(5 + insets.left, 80 + insets.top,size.width, size.height);
 
         customer.addActionListener(new customerButtonListner());
         employee.addActionListener(new employeeButtonListner());
@@ -71,45 +74,6 @@ public class EntryGUI extends JFrame{
         //Makes the window visible to user
         setVisible(true);
 
-
-        //panel1 = new JPanel();
-        //panel1.setBackground(Color.gray);
-        //panel1.setBorder(BorderFactory.createTitledBorder("Entry"));
-        //panel1.setPreferredSize(new DimensionUIResource(325, 150));
-        //panel1.setLayout(null);
-
-        //Getting the inset of the JPanel called panel1
-        //insets = panel1.getInsets();
-
-        //Positioning the "CUSTOMER" button snd text box
-        //size = customer.getPreferredSize();
-        //customer.setBounds(5 + insets.left, 45 + insets.top,size.width, size.height);
-
-        //Positioning the "EMPLOYEE" button snd text box
-        //size = employee.getPreferredSize();
-        //employee.setBounds(5 + insets.left, 80 + insets.top,size.width, size.height);
-       
-        //panel1.add(heading);
-        //panel1.add(customer);
-        //panel1.add(employee);
-        
-
-        //setTitle("Auto Channel Limited Entry Screen");
-        //getContentPane().setBackground(Color.gray);
-        //Disabling the mimize and resizing functionality of the frame
-        //setResizable(false);
-        ///setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        //pack();
-        //setSize(340, 200);
-
-        //add(panel1);
-    
-        //Positions Frame in the center of the user's screen
-        //setLocationRelativeTo(null);
-
-        //Makes the window visible to user
-        //setVisible(true);
 
     }
 

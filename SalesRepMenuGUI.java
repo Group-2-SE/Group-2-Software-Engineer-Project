@@ -2,12 +2,15 @@ package auto;
 import java.util.*;
 import java.io.*;
 
-public class salesrep extends javax.swing.JFrame {
+public class SalesRepMenuGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
      */
-    public salesrep() {
+
+    private InputHandler userInput;
+
+    public SalesRepMenuGUI(InputHandler userInput) {
         initComponents();
     }        
     private void initComponents() {

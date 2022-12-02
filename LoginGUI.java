@@ -116,10 +116,6 @@ public class LoginGUI extends JFrame{
     {
         public void actionPerformed(ActionEvent event)
         {
-            //System.out.println("Submit Button Pressed");
-            //Getting the String that is in the uname textbox and getting the String of the hidden text in the pwordbox textbox
-            
-            //String uname = unamebox.getText();
             String pword = String.valueOf(pwordbox.getPassword());
             pwordbox.setText("");
 
@@ -147,7 +143,7 @@ public class LoginGUI extends JFrame{
                 {
                     LoginFrame.dispose();
                     hint.setVisible(false);
-                    ExecMenuGUI ExecMenuFrame = new ExecMenuGUI(userInput);
+                    ExecMenuGUI  ExecMenuFrame = new ExecMenuGUI(userInput);
                 }
                 else
                 {
