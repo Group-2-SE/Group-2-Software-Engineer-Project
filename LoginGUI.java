@@ -147,7 +147,7 @@ public class LoginGUI extends JFrame{
                 {
                     LoginFrame.dispose();
                     hint.setVisible(false);
-                    ExecMenuGUI  ExecMenuFrame = new ExecMenuGUI(userInput);
+                    ExecMenuGUI ExecMenuFrame = new ExecMenuGUI(userInput);
                 }
                 else
                 {
