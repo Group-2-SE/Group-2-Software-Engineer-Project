@@ -143,7 +143,7 @@ public class LoginGUI extends JFrame{
                 {
                     LoginFrame.dispose();
                     hint.setVisible(false);
-                    ExecMenuGUI  ExecMenuFrame = new ExecMenuGUI(userInput);
+                    ManageMenuGUI  ManageMenuFrame = new ManageMenuGUI(userInput);
                 }
                 else
                 {
