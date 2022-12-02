@@ -65,7 +65,7 @@ public class ClientListing extends JFrame{
         //  };
         // editButton.addActionListener(new EditButtonListener());
 
-        dateSortButton = new JButton("Sort by First Name(A-Z)")
+        dateSortButton = new JButton("Sort by Date")
         {
             public Dimension getPreferredSize() {
                return new Dimension(165, 25);
@@ -88,7 +88,7 @@ public class ClientListing extends JFrame{
         panel1.add(backButton);
 
         setContentPane(panel1);
-        setTitle("Auto Channel Limited - Customer Listing");
+        setTitle("Auto Channel Limited - Customer Report");
         getContentPane().setBackground(Color.gray);
         setResizable(false);
         
