@@ -16,7 +16,6 @@ public class LoginGUI extends JFrame{
     private JLabel heading;
     private JLabel hint;
     private JLabel pwordlabel;
-
     private JButton signIn;
     
 
@@ -89,10 +88,11 @@ public class LoginGUI extends JFrame{
         signIn.setBounds(70 + insets.left, 103 + insets.top,size.width, size.height);
 
         panel1.add(hint);
+        panel1.add(signIn);
         panel1.add(heading);
         panel1.add(pwordlabel);
         panel1.add(pwordbox);
-        panel1.add(signIn);
+        
 
         setTitle("Auto Channel Limited Employee Sign In");
         getContentPane().setBackground(Color.gray);
