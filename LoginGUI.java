@@ -80,14 +80,14 @@ public class LoginGUI extends JFrame{
 
         //Positioning the "Password:" label snd text box
         size = pwordlabel.getPreferredSize();
-        pwordlabel.setBounds(5 + insets.center, 65 + insets.top,size.width, size.height);
+        pwordlabel.setBounds(5 + insets.left, 65 + insets.top,size.width, size.height);
         size = pwordbox.getPreferredSize();
-        pwordbox.setBounds(5 + insets.center, 80 + insets.top,size.width, size.height);
+        pwordbox.setBounds(5 + insets.left, 80 + insets.top,size.width, size.height);
 
-      //Positioning the sign in button
+      //Positioning the "SIGN IN" button snd text box
         size = signIn.getPreferredSize();
         signIn.setBounds(70 + insets.left, 103 + insets.top,size.width, size.height);
-        
+
         panel1.add(hint);
         panel1.add(heading);
         panel1.add(pwordlabel);
@@ -131,20 +131,19 @@ public class LoginGUI extends JFrame{
                     //Disposes the SignInFrame so that the new frame can be displayed on its own
                     LoginFrame.dispose();
                     hint.setVisible(false);
-                    SalesRepMenuGUI SalesRepMenuFrame = new SalesRepMenuGUI(userInput);
-                    
+                    SalesRepMenuFrame = new SalesRepMenuGUI(userInput)   
                 }
                 else if(userInput.equals(pword2))
                 {
                     LoginFrame.dispose();
                     hint.setVisible(false);
-                    AdminMenuGUI AdminMenuFrame = new AdminMenuGUI(userInput);
+                    AdminMenuFrame = new AdminMenuGUI(userInput);
                 }
                 else if(userInput.equals(pword3))
                 {
                     LoginFrame.dispose();
                     hint.setVisible(false);
-                    ManageMenuGUI  ManageMenuFrame = new ManageMenuGUI(userInput);
+                    ManageMenuFrame = new ManageMenuGUI(userInput);
                 }
                 else
                 {

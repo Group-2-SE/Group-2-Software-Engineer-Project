@@ -41,24 +41,14 @@ public class EntryGUI extends JFrame{
         //Adding action listners to each button to give it functionality
         customer = new JButton("CUSTOMER");
         customer.setPreferredSize(new DimensionUIResource(250, 50));
-        //customer.setBounds(5 + insets.left, 45 + insets.top,size.width, size.height);
+       
 
         employee = new JButton("EMPLOYEE");
         employee.setPreferredSize(new DimensionUIResource(75, 20));
-        //employee.setBounds(5 + insets.left, 80 + insets.top,size.width, size.height);
+        
 
         customer.addActionListener(new customerButtonListner());
         employee.addActionListener(new employeeButtonListner());
-
-        //customer = new JButton("CUSTOMER");
-        //customer.setPreferredSize(new DimensionUIResource(75, 20));
-        //customer.setFont(new FontUIResource(customer.getText(), Font.BOLD, 10));
-        //customer.addActionListener(new customerButtonListner());
-
-        //employee = new JButton("EMPLOYEE");
-        //employee.setPreferredSize(new DimensionUIResource(75, 20));
-        //employee.setFont(new FontUIResource(employee.getText(), Font.BOLD, 10));
-        //employee.addActionListener(new employeeButtonListner());
 
     
         getContentPane().setBackground(Color.gray);
@@ -66,11 +56,13 @@ public class EntryGUI extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          
         pack();
+        
         //Positions Frame in the center of the user's screen
         setSize(350, 200);
         setLocationRelativeTo(null);
         add(customer);
         add(employee);
+
         //Makes the window visible to user
         setVisible(true);
 
